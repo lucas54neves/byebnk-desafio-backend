@@ -122,20 +122,26 @@ django-admin startproject core .
 django-admin startapp asset
 ```
 
-### Start server
+### Iniciar o servidor
 
 ```
 python manage.py runserver
 ```
 
-### Create migrations
+### Criar migrations
 
 ```
 python manage.py makemigrations
 ```
 
-### Run migrations
+### Rodar migrations
 
 ```
 python manage.py migrate
+```
+
+### Para rodar os testes
+
+```
+python manage.py test
 ```
