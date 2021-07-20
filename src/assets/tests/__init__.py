@@ -1,0 +1,1 @@
+from assets.tests.models.assets import AssetTestCase
