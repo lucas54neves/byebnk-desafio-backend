@@ -87,3 +87,55 @@ desenvolva uma API REST que permita usuários a gerenciar investimentos.
 6. Aderência a [PEP 8](https://duckduckgo.com/?q=pep8)
 7. A implementação de requisitos opcionais
 8. A implementação de funcionalidades extras
+
+## Comandos principais
+
+### Instalar a venv
+
+```
+# No diretório src
+python3 -m venv venv
+```
+
+### Ativar a venv
+
+```
+# No diretório src
+source venv/bin/activate
+```
+
+### Para instalar as dependências
+
+```
+pip install -r requirements.txt
+```
+
+### Criar o projeto
+
+```
+django-admin startproject core .
+```
+
+### Criar app asset
+
+```
+django-admin startapp asset
+```
+
+### Start server
+
+```
+python manage.py runserver
+```
+
+### Create migrations
+
+```
+python manage.py makemigrations
+```
+
+### Run migrations
+
+```
+python manage.py migrate
+```
