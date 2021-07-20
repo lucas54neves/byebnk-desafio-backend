@@ -23,6 +23,7 @@ route = routers.DefaultRouter()
 route.register('assets', viewsets.AssetViewSet, basename='Assets')
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(route.urls))
+  path('admin/', admin.site.urls),
+  path('accounts/', include('allauth.urls')),
+  path('', include(route.urls))
 ]

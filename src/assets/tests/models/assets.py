@@ -9,14 +9,14 @@ class AssetTestCase(TestCase):
       value=120
     )
   
-  def testGet(self):
+  def test_get(self):
     asset = Assets.objects.get(pk=self.asset.id)
 
     self.assertEqual(asset.name, 'Bitcoin')
     self.assertEqual(asset.modality, 'CR')
     self.assertEqual(asset.value, 120)
   
-  def testUpdate(self):
+  def test_update(self):
     asset = Assets.objects.get(pk=self.asset.id) 
 
     asset.name = 'Tesouro direto'
@@ -30,7 +30,7 @@ class AssetTestCase(TestCase):
     self.assertEqual(asset_updated.modality, 'RV')
     self.assertEqual(asset_updated.value, 10)
   
-  def testDelete(self):
+  def test_delete(self):
     asset = Assets.objects.get(pk=self.asset.id)
 
     asset.delete()
