@@ -1,1 +1,0 @@
-from assets.serializers.assets import AssetSerializer
