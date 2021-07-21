@@ -47,6 +47,7 @@ INSTALLED_APPS = [
   # Local apps
   'assets',
   'users',
+  'transactions',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_currentuser.middleware.ThreadLocalUserMiddleware'
 ]
 
 ROOT_URLCONF = 'core.urls'
