@@ -1,5 +1,15 @@
 # Desafio técnico backend - Byebnk
 
+## Sumário
+
+1. [Descrição do desafio](#descricao-desafio)
+
+2. [Comandos principais](#comandos-principais)
+
+3. [Rotas](#rotas)
+
+## Descrição do desafio <a name="descricao-desafio" />
+
 Olá,
 
 Estamos muito felizes que você deseja fazer parte do time da Byebnk. O teste abaixo é construido de
@@ -26,12 +36,12 @@ vamos perguntar o porque você decidiu testar A e não B).
 Lembre-se: Existem diversas formas de se desenvolver um sistema. Não estamos procurando a resposta
 certa, mas sim uma explicação racional por trás de cada decisão tomada.
 
-## Requisitos obrigatórios
+### Requisitos obrigatórios
 
 Usando [Django](https://www.djangoproject.com/) e [Django REST framework](https://www.django-rest-framework.org/)
 desenvolva uma API REST que permita usuários a gerenciar investimentos.
 
-### Usuários devem ser capazes de
+#### Usuários devem ser capazes de
 
 1. Cadastrar ativos
    - Os ativos devem conter no mínimo as informações abaixo:
@@ -54,12 +64,12 @@ desenvolva uma API REST que permita usuários a gerenciar investimentos.
    - Você pode decidir onde e como mostrar a informação
    - O saldo da carteira é o somatório de saldos investidos em cada um dos ativos
 
-### Usuários não podem
+#### Usuários não podem
 
 - Ver aplicações e resgates de outros usuários
 - Ver o saldo da carteira de outros usuários
 
-### Outros detalhes da API
+#### Outros detalhes da API
 
 - Testes
   - As funcionalidade principais devem estar com [testes](https://docs.djangoproject.com/en/3.1/topics/testing/) escritos
@@ -69,7 +79,7 @@ desenvolva uma API REST que permita usuários a gerenciar investimentos.
   - Você **não** precisa desenvolver endpoints para criação/gerenciamento de usuários
   - Você apenas precisa desenvolver os 2 a 3 endpoints REST necessários para a realização dos requisitos obrigatórios
 
-## Requisitos extras (opcional)
+### Requisitos extras (opcional)
 
 - Permitir os usuários listar ativos por tipo (renda fixa, renda váriavel, cripto)
 - Adicionar o preço de mercado de cada ativo e calcular o saldo de carteira utilizando ele
@@ -77,7 +87,7 @@ desenvolva uma API REST que permita usuários a gerenciar investimentos.
 - Salvar o endereço de IP do usuário que fez uma aplicação/resgate
 - Expandir o sistema adicionando taxa de custódia, administração, tarifa de saque, etc...
 
-## O que vamos avaliar (nesta ordem)
+### O que vamos avaliar (nesta ordem)
 
 1. O cumprimento dos requisitos obrigatórios
 2. A forma que o código está organizado
@@ -88,7 +98,7 @@ desenvolva uma API REST que permita usuários a gerenciar investimentos.
 7. A implementação de requisitos opcionais
 8. A implementação de funcionalidades extras
 
-## Comandos principais
+## Comandos principais <a name="comandos-principais" />
 
 ### Instalar a venv
 
@@ -146,7 +156,7 @@ python manage.py migrate
 python manage.py test
 ```
 
-## Rotas
+## Rotas <a name="rotas" />
 
 Observação: O projeto está programado para calcular o valor dos ativos automaticamente, porém deve ser enviado os nomes corretos que a lib yfinance espera. Segue alguns exemplos para teste:
 
