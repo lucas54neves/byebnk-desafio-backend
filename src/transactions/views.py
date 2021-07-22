@@ -13,7 +13,6 @@ class TransactionViewSet(viewsets.ModelViewSet):
 
   def get_queryset(self):
     return [transaction for transaction in Transactions.objects.all() if transaction.user.id == self.request.user.id]
-    # return Transactions.objects.all()
 
   def update(self, request, pk=None):
     return Response('Não é permitido editar transações', status=status.HTTP_400_BAD_REQUEST)
