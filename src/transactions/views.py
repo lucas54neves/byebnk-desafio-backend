@@ -50,8 +50,10 @@ class TransactionViewSet(viewsets.ModelViewSet):
             user.balance *= 0.0075
 
         if (request.POST.get('type') == 'rescue'):
+          value = asset.value * int(request.POST.get('quantity'))
           # Tarifa de saque = 0.25%
-          user.balance *= 0.0025
+          user.balance += value * 0.0025
+          user.balance += value
         
         user.save()
         self.perform_create(serializer)
