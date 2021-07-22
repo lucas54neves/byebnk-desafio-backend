@@ -145,3 +145,37 @@ python manage.py migrate
 ```
 python manage.py test
 ```
+
+## Rotas
+
+Observação: O projeto está programado para calcular o valor dos ativos automaticamente, porém deve ser enviado os nomes corretos que a lib yfinance espera. Segue alguns exemplos para teste:
+
+- '^BVSP'
+- 'PETR4.SA'
+- 'BTC-USD'
+- 'ETH-USD'
+- 'XPLG11.SA'
+
+### /balance
+
+Rota que retorna o saldo da conta do usuário. O usuário deve estar logado.
+
+### /assets
+
+Rota para adicionar e visualizar os ativos financeiros. O usuário deve estar logado. Para listar por categoria, deve-se passar por query params no parâmetro **modality** pelo menos um desses valores:
+
+- 'cripto'
+- 'variable'
+- 'fixed'
+
+### /transactions
+
+Rota para adicionar e visualizar as transações (aplicação e resgate). O usuário deve estar logado.
+
+### /accounts
+
+Rotas relativas às contas de usuário.
+
+- /accounts/signup: Criar conta
+- /accounts/login: Realizar login
+- /accounts/logout: Realizar logout

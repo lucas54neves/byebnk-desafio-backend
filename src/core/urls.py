@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from assets.views import AssetViewSet
 from transactions.views import TransactionViewSet
+from users.views import UserViewSet
 
 route = routers.DefaultRouter()
 
@@ -27,5 +28,6 @@ route.register('transactions', TransactionViewSet, basename='Transactions')
 urlpatterns = [
   path('admin/', admin.site.urls),
   path('accounts/', include('allauth.urls')),
-  path('', include(route.urls))
+  path('balance', UserViewSet.balance, name='balance'),
+  path('', include(route.urls)),
 ]
